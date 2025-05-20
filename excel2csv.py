@@ -22,7 +22,8 @@ def convert_excel_to_csv(input_dir, output_dir):
             except Exception as e:
                 print(f"转换失败: {filename}，原因: {e}")
 
+
 # 使用示例
 input_folder = "input_path"      # 输入文件夹路径
-output_folder = "output_path"       # 输出文件夹路径
+output_folder = "output_path"  # 输出文件夹路径
 convert_excel_to_csv(input_folder, output_folder)
