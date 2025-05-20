@@ -16,8 +16,8 @@ def convert_excel_to_csv(input_dir, output_dir):
                 csv_filename = os.path.splitext(filename)[0] + ".csv"
                 csv_path = os.path.join(output_dir, csv_filename)
 
-                # 保存为 CSV 文件
-                df.to_csv(csv_path, index=False, encoding="utf-8")
+                # 保存为 CSV 文件,注意编码方式，错误可能乱码
+                df.to_csv(csv_path, index=False, encoding="gbk")
                 print(f"已转换: {filename} -> {csv_filename}")
             except Exception as e:
                 print(f"转换失败: {filename}，原因: {e}")
